@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: # Url do seu banco de dados.
+    username: # Nome do seu banco de dados.         
+    password: # Senha do banco de dados                               
+  jpa:
+    show-sql: true
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      jdbc:
+        lob:
+          non-contextual-creation: true
+  output:
+    ansi:
+      enabled: always
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: # email que irá utilizar para enviar os emails.
+    password: # Acesse esse link para gerar uma senha específica, ao invés de utilizar a sua senha normal: https://support.google.com/accounts/answer/185833
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls: 
+            enable: true
